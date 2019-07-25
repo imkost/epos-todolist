@@ -1,0 +1,17 @@
+.App {
+  margin: 50px;
+}
+
+.App__todo {
+  width: 150px;
+  padding: 10px;
+  border: 1px solid gray;
+  cursor: pointer;
+  margin: 5px;
+}
+.App__todo:hover {
+  background: #fafafa;
+}
+.App__todo_done {
+  text-decoration: line-through;
+}
