@@ -1,6 +1,5 @@
 import store from '/store.js'
-requireMeta(import.meta)
-require('./app.css')
+require('./app.css', import.meta)
 
 export default function App () {
   return {

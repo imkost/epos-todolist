@@ -4,16 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "http-server src -c-1",
-    "watch": "parcel src/index.html"
+    "start": "cd src; browser-sync start --no-notify --server --files .",
+    "start-no-autorefrsh": "cd src; browser-sync start --no-notify --server --files . --reload-delay 99999999"
   },
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/plugin-syntax-import-meta": "^7.2.0",
-    "http-server": "^0.11.1"
-  },
-  "dependencies": {
-    "parcel-bundler": "^1.12.3"
+    "browser-sync": "^2.26.7"
   }
 }
