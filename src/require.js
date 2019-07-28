@@ -2,9 +2,10 @@ window.require = require
 
 let count = 0
 
-function require (cssPath) {
+function require (cssPath, importMeta) {
   if (cssPath.startsWith('./')) {
-    cssPath = cssPath.replace('./', '/ui/')
+    const folderPath = importMeta.url.split('/').slice(0, -1).join('/')
+    cssPath = folderPath + cssPath.replace('.', '')
   }
 
   document.body.style.display = 'none'
