@@ -1,12 +1,21 @@
-window.require = require
+Object.assign(window, {
+  require,
+  requireMeta
+})
 
 let count = 0
+let meta
 
-function require (cssPath, importMeta) {
+function requireMeta (newMeta) {
+  meta = newMeta
+}
+
+function require (cssPath) {
   if (cssPath.startsWith('./')) {
-    const folderPath = importMeta.url.split('/').slice(0, -1).join('/')
+    const folderPath = meta.url.split('/').slice(0, -1).join('/')
     cssPath = folderPath + cssPath.replace('.', '')
   }
+  meta = null
 
   document.body.style.display = 'none'
   count += 1
