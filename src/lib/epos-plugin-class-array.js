@@ -8,8 +8,13 @@ import { autorun } from '/lib/epos.js'
  */
 
 const _prevClassList_ = Symbol('prevClassList')
+let classProcessor = (c) => c
 
 export default {
+  setClassProcessor (fn) {
+    classProcessor = fn
+  },
+
   preprocess ({ state, template }) {
     if (template.class) {
       state.class = template.class
@@ -30,6 +35,8 @@ export default {
     autorun(() => {
       const prevClassList = node[_prevClassList_] || []
       const nextClassList = [].concat(typeof state.class === 'function' ? state.class() : state.class)
+        .filter(Boolean)
+        .map(classProcessor)
         .filter(c => c && typeof c === 'string')
         .join(' ')
         .split(/\s+/)

@@ -1,8 +1,12 @@
-export default {
-  class: makeBemClass
-}
+export default function bemClassProcessor (props = {}) {
+  if (typeof props === 'string') {
+    return props
+  }
 
-function makeBemClass (className, mods = {}) {
+  const className = props.name
+  const mods = {...props}
+  delete mods.name
+
   if (!mods) {
     return className
   }

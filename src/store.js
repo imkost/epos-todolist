@@ -1,16 +1,15 @@
 import { dynamic } from '/lib/epos.js'
 
-export default {
-  get: getStore,
+export default Object.assign(store, {
   init: initStore
-}
+})
 
-let store
+let st
 
-function getStore () {
-  return store
+function store () {
+  return st
 }
 
 function initStore (data) {
-  store = dynamic(data)
+  st = dynamic(data)
 }
