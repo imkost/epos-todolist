@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "cd src; browser-sync start --no-notify --server --files .",
-    "start-no-autorefrsh": "cd src; browser-sync start --no-notify --server --files . --reload-delay 99999999"
+    "start-no-autorefresh": "cd src; browser-sync start --no-notify --server --files . --reload-delay 99999999"
   },
   "license": "ISC",
   "devDependencies": {
