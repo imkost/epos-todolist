@@ -1,5 +1,6 @@
 import store from '/store.js'
 
+
 export default function App () {
   return {
     class: 'App',

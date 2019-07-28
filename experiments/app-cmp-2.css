@@ -2,7 +2,6 @@
   margin: 50px;
 }
 
-
 .App__todo {
   width: 150px;
   padding: 10px;
@@ -12,7 +11,7 @@
 }
 
 .App__todo:hover {
-  background: #fafafa;
+  background: var(--bcg-primary);
 }
 
 .App__todo_done {
