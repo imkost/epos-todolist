@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cd src; browser-sync start --no-notify --server --files .",
-    "start-no-autorefresh": "cd src; browser-sync start --no-notify --server --files . --reload-delay 99999999"
+    "start": "cd src; browser-sync start --no-notify --no-ghost-mode --server --files .",
+    "start-no-autorefresh": "cd src; browser-sync start --no-notify --no-ghost-mode --server --files . --reload-delay 99999999"
   },
   "license": "ISC",
   "devDependencies": {
