@@ -5,6 +5,7 @@ import pluginOnCreate from '/lib/epos-plugin-on-create.js'
 import pluginMountUnmount from '/lib/epos-plugin-mount-unmount.js'
 import store from '/store.js'
 import App from '/ui/app.js'
+require('/ui/global.css')
 
 ;(function main () {
   pluginClassArray.setClassProcessor(bemClassProcessor)

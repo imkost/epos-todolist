@@ -1,5 +1,5 @@
 import store from '/store.js'
-
+require('./app.css')
 
 export default function App () {
   return {
